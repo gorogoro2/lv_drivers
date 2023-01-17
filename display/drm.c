@@ -34,7 +34,7 @@
 #define print(msg, ...)	fprintf(stderr, msg, ##__VA_ARGS__);
 #define err(msg, ...)  print("error: " msg "\n", ##__VA_ARGS__)
 #define info(msg, ...) print(msg "\n", ##__VA_ARGS__)
-#define dbg(msg, ...)  {} //print(DBG_TAG ": " msg "\n", ##__VA_ARGS__)
+#define dbg(msg, ...)  print(DBG_TAG ": " msg "\n", ##__VA_ARGS__)
 
 struct drm_buffer {
 	uint32_t handle;
